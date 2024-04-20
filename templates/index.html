@@ -1,4 +1,4 @@
-<head>
+<!-- <head>
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
@@ -16,4 +16,16 @@
     </div>
 </body>
 
+</html> -->
+<html>
+    <head><title>{{ title }}</title></head> <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<body>
+    <h1>Choose a Dataset</h1>
+    <form method="post">
+        <img src="{{ url_for('static', filename='download1.jpg') }}" alt="Dataset Image">
+        <button type="submit" name="dataset_1">Dataset 1</button>
+        <img src="{{ url_for('static', filename='download2.jpg') }}" alt="Dataset Image">
+        <button type="submit" name="dataset_2">Dataset 2</button>
+    </form>
+</body>
 </html>
