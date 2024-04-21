@@ -38,7 +38,7 @@ def index():
    return render_template('index.html')
 def compare_images(img1_path, img2_path):
     # Construct the full paths to the images
-    directory = '/workspaces/codespaces-flask/'
+    directory = '/home/codespace/zany-palm-tree/'
     img1_full_path = os.path.join(directory, img1_path)
     img2_full_path = os.path.join(directory, img2_path)
     
