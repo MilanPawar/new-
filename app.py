@@ -42,13 +42,30 @@ def compare_images(img1_path, img2_path):
     img1_full_path = os.path.join(directory, img1_path)
     img2_full_path = os.path.join(directory, img2_path)
     
+
+# Read the grayscale image (gray2 in your case)
+# Assuming you already have 'gray2' loaded
+
+# Specify the output path
+    output_path4 = '/home/codespace/zany-palm-tree/static/image4.jpg'
+    output_path3 = '/home/codespace/zany-palm-tree/static/image3.jpg'
+    output_path2 = '/home/codespace/zany-palm-tree/static/image2.jpg'
+    output_path1 = '/home/codespace/zany-palm-tree/static/image1.jpg'
+# Save the image
+   # cv2.imwrite(output_path4, gray2)
+
     # Load images
     img1 = cv2.imread(img1_full_path)
     img2 = cv2.imread(img2_full_path)
+    cv2.imwrite(output_path1, img1)
+    cv2.imwrite(output_path2, img2)
     
     # Convert images to grayscale
     gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
     gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+    cv2.imwrite(output_path3, gray1)
+    cv2.imwrite(output_path4, gray2)
+
     
     # Compute Structural Similarity Index (SSIM)
     ssim_index = ssim(gray1, gray2)
@@ -58,9 +75,9 @@ def compare_images(img1_path, img2_path):
     
     # Compare SSIM with threshold
     if ssim_index > threshold:
-        return "System scan NORMAL"
+        return "Normal Behaviour"
     else:
-        return "Anomalies found"
+        return "Suspecious Activity"
 def run_helper_anomaly():
  img1_path = "Screenshot (917).png"
  img2_path = "Screenshot (916).png"

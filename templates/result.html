@@ -1,4 +1,4 @@
-<!-- templates/result.html -->
+<!-- templates/result.html
 <!-- 
 <html>
 <body>
@@ -6,10 +6,160 @@
     <p>The sum of {{ num1 }} and {{ num2 }} is: {{ result }}</p>
 </body>
 </html> -->
-<html> <head><title>{{ title }}</title></head> <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<!-- <html> <head><title>{{ title }}</title></head> <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 <body>
     <h1>Result</h1>
     <p>{{ result }}</p>
     <img src="{{ url_for('static', filename='OIP (1).jpg') }}" alt="Dataset Image">
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>{{ result }}</p>
+    <img src="{{ url_for('static', filename='OIP (1).jpg') }}" alt="Dataset Image">
+</body>
+</html> -->
+<!-- <-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>{{ result }}</p>
+    <img src="{{ url_for('static', filename='OIP (1).jpg') }}" alt="Dataset Image">
+
+    <div class="image-grid">
+        <img src="{{ url_for('static', filename='image1.jpg') }}">
+        <img src="{{ url_for('static', filename='image2.jpg') }}">
+        <!-- Add two more images here -->
+    </div>
+</body>
+</html> --> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>{{ result }}</p>
+    <img src="{{ url_for('static', filename='OIP (1).jpg') }}" alt="Dataset Image">
+
+    <div class="image-grid">
+        <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Image 1">
+        <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Image 2">
+        <!-- Add two more images here -->
+        <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Image 3">
+        <img src="{{ url_for('static', filename='image4.jpg') }}" alt="Image 4">
+    </div>
 </body>
 </html>
