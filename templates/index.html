@@ -17,8 +17,45 @@
 </body>
 
 </html> -->
+<!-- <html> -->
+    <!-- <head><title>{{ title }}</title></head> <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<body>
+    <h1>Choose a Dataset</h1>
+    <form method="post">
+        <img src="{{ url_for('static', filename='download1.jpg') }}" alt="Dataset Image">
+        <button type="submit" name="dataset_1">Dataset 1</button>
+        <img src="{{ url_for('static', filename='download2.jpg') }}" alt="Dataset Image">
+        <button type="submit" name="dataset_2">Dataset 2</button>
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
 <html>
-    <head><title>{{ title }}</title></head> <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <style>
+        body {
+            background-color: #222; /* Dark background color */
+            color: #fff; /* Text color */
+            text-align: center; /* Center align content */
+        }
+        form {
+            display: inline-block; /* Keep form elements inline */
+        }
+        button {
+            margin: 10px; /* Add margin around buttons */
+            background-color: #444; /* Darker button background color */
+            color: #fff; /* Button text color */
+            border: none; /* Remove button border */
+            padding: 10px 20px; /* Add padding to buttons */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #666; /* Darker background color on hover */
+        }
+    </style>
+</head>
 <body>
     <h1>Choose a Dataset</h1>
     <form method="post">
